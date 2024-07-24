@@ -1,4 +1,4 @@
-module ryzech.net
+module github.com/ryzech/ryzech.net
 
 go 1.22.4
 

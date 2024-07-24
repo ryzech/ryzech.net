@@ -1,11 +1,13 @@
 package home
 
-import "ryzech.net/view/layout"
+import "github.com/ryzech/ryzech.net/view/layout"
 
 templ Home() {
-  @layout.Base() {
-    <div class="home">
-      <h1>Hello world!</h1>
-    </div>
-  }
+	@layout.Base() {
+		<div class="home">
+			<button class="rounded-md">Hello world!</button>
+			<h1>Hello there</h1>
+			<div i-logos-vue></div>
+		</div>
+	}
 }

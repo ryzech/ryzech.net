@@ -1,9 +1,10 @@
 package main
 
 import (
-	"github.com/labstack/echo/v4"
 	"os"
-	"ryzech.net/handler"
+
+	"github.com/labstack/echo/v4"
+	"github.com/ryzech/ryzech.net/handler"
 )
 
 func main() {
@@ -17,5 +18,5 @@ func main() {
 		port = ":3000"
 	}
 
-	app.Logger.Fatal(app.Start(port))
+	app.Start(port)
 }
