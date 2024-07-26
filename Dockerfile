@@ -1,6 +1,7 @@
-FROM alpine:latest
+FROM golang:alpine
 WORKDIR /app
-COPY ./bin/ ./
+COPY . ./
+RUN make build
 
 EXPOSE 3000
-ENTRYPOINT [ "./app" ]
+ENTRYPOINT [ "./bin/app" ]
