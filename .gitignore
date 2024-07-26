@@ -1,2 +1,4 @@
 view/**/*.go
-build/
+bin/
+tmp/
+testdata/

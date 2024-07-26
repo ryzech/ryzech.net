@@ -1,0 +1,7 @@
+[build]
+bin = "./bin/app"
+cmd = "make build"
+delay = 1000
+exclude_dir = ["bin", "tmp", "testdata"]
+exclude_regex = ["_templ.go"]
+include_ext = ["go", "templ"]
