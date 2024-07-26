@@ -11,5 +11,6 @@ build:
 	@go build -o ./bin/app ./cmd/main.go
 
 clean:
+	@rm -rf ./tmp
 	@rm -rf ./bin
 	@rm -f ./view/**/*_templ.go
