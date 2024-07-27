@@ -1,22 +1,18 @@
 package layout
 
 templ Base() {
-<!DOCTYPE html>
-<html>
-
-<head>
-  <title>Ryzech</title>
-  <script type="text/javascript" src="https://unpkg.com/htmx.org" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="https://unpkg.com/alpinejs" crossorigin="anonymous" defer></script>
-  <script type="text/javascript" src="https://unpkg.com/@unocss/preset-uno" crossorigin="anonymous"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
-</head>
-
-<body class="bg-gray-700">
-  { children... }
-</body>
-
-</html>
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Ryzech</title>
+			<script type="text/javascript" src="https://unpkg.com/htmx.org" crossorigin="anonymous"></script>
+			<script type="text/javascript" src="https://unpkg.com/alpinejs" crossorigin="anonymous" defer></script>
+			<link rel="preconnect" href="https://fonts.googleapis.com"/>
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+			<link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+		</head>
+		<body class="bg-gray-700">
+			{ children... }
+		</body>
+	</html>
 }

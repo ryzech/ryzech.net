@@ -7,6 +7,7 @@ dev: build
 	@PORT=$(PORT) air
 
 build:
+	@npx unocss "./view/**/*.templ" -o ./static/css/style.css -m
 	@templ generate
 	@go build -o ./bin/app ./cmd/main.go
 

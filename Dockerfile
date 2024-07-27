@@ -5,10 +5,12 @@ COPY go.mod go.sum ./
 RUN go mod download \
     && go mod verify \
     && go install github.com/a-h/templ/cmd/templ@latest \
-    && apk add --no-cache --update make
+    && apk add --no-cache --update make nodejs npm
 
 COPY . .
 RUN make build 
 
+FROM scratch
+COPY --from=0 /usr/src/app/bin/app /bin/app
 EXPOSE 3000
-ENTRYPOINT [ "./bin/app" ]
+ENTRYPOINT [ "/bin/app" ]
