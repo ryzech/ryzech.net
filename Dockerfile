@@ -13,5 +13,6 @@ RUN make build
 
 FROM scratch
 COPY --from=0 /usr/src/app/bin/app /bin/app
+COPY --from=0 /usr/src/app/static/ /bin/
 EXPOSE 3000
 ENTRYPOINT [ "/bin/app" ]
