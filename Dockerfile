@@ -12,7 +12,7 @@ COPY . .
 RUN make build 
 
 FROM scratch
-COPY --from=0 /usr/src/app/bin/app /bin/app
-COPY --from=0 /usr/src/app/static/ /bin/
+WORKDIR /usr/src/app
+COPY --from=0 /usr/src/app .
 EXPOSE 3000
-ENTRYPOINT [ "/bin/app" ]
+ENTRYPOINT [ "/usr/src/app/bin/app" ]
