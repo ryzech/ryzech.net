@@ -5,7 +5,8 @@ COPY go.mod go.sum ./
 RUN go mod download \
     && go mod verify \
     && go install github.com/a-h/templ/cmd/templ@latest \
-    && apk add --no-cache --update make nodejs npm
+    && apk add --no-cache --update make nodejs npm \
+    && npm i -g @unocss/cli
 
 COPY . .
 RUN make build 
