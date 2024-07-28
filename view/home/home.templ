@@ -1,13 +1,14 @@
 package home
 
-import "github.com/ryzech/ryzech.net/view/layout"
+import (
+	"github.com/ryzech/ryzech.net/view/components"
+	"github.com/ryzech/ryzech.net/view/layout"
+)
 
 templ Home() {
-@layout.Base() {
-<div class="home">
-  <h1 class="flex items-center justify-center text-center text-white border-4 border-blue-500 rounded-lg p-4">
-    Website is currently under construction!
-  </h1>
-</div>
-}
+	@layout.Base() {
+		<div class="home">
+			@components.Nav()
+		</div>
+	}
 }
