@@ -1,0 +1,17 @@
+<extend template="base.shtml">
+<title id="title">Keys</title>
+<head id="head"></head>
+<div id="content">
+    <style>
+    h1,
+    h2,
+    h3 {
+      text-align: center;
+    }
+    </style>
+    <div>
+      <h1 style="margin-bottom:0;">
+        GPG Keys
+      </h1>
+    </div>
+</div>

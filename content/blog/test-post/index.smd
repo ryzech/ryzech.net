@@ -1,0 +1,15 @@
+---
+.title = "Test Post",
+.description = "Test Post Description.",
+.date = @date("2024-09-27T00:00:00"),
+.author = "RyzechDev",
+.layout = "post.shtml",
+.draft = false,
+--- 
+Hello there!
+
+## Test
+
+```bash
+ls -la
+```

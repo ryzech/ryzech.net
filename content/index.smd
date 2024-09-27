@@ -1,0 +1,7 @@
+---
+.title = "Homepage",
+.date = @date("2024-09-26T00:00:00"),
+.author = "RyzechDev",
+.layout = "index.shtml",
+.draft = false,
+--- 

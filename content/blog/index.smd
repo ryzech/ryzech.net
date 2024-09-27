@@ -1,0 +1,11 @@
+---
+.title = "Posts",
+.date = @date("2024-09-27T00:00:00"),
+.author = "RyzechDev",
+.layout = "blog-index.shtml",
+.alternatives = [{ 
+    .layout = "rss.xml", 
+    .output = "index.xml",
+}],
+.draft = false,
+--- 
