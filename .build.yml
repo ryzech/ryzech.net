@@ -1,17 +1,21 @@
 image: alpine/edge
 secrets:
   - 69e3be6a-fe40-4dec-84ce-ba2e5e9a62a0
-sources:
-  - git@git.sr.ht/~ryzechdev/ryzech.net
 environment:
-  GIT_SSH_COMMAND: ssh -o StrictHostKeyChecking=no
+  REPO: ryzech.net
+  GH_USER: ryzech
 tasks:
-  - setup: |
-      # This is for not having to cd into your <repo> for each task
-      echo 'cd ryzech.net' >> ~/.buildenv
-  - check: |
-      if [ "$(git rev-parse origin/main)" != "$(git rev-parse HEAD)" ]; then \
-        complete-build; \
-      fi
-  - mirror: |
-      git push --force --mirror git@github.com:ryzech/ryzech.net.git
+  - write-ssh-config: |
+      cat <<_FILE_ >> ~/.ssh/config
+      Host github.com
+        IdentityFile ~/.ssh/id_rsa
+        IdentitiesOnly yes
+        BatchMode yes
+        StrictHostKeyChecking no
+      _FILE_
+  - push-to-github: |
+      cd ~/"${REPO}"
+      # remove remotes/origin/HEAD so we don't push it
+      git remote set-head origin -d
+      git remote add github "git@github.com:${GH_USER}/${REPO}.git"
+      git push --prune github '+refs/remotes/origin/*:refs/heads/*' '+refs/tags/*:refs/tags/*'
