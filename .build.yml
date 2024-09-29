@@ -1,7 +1,7 @@
 image: alpine/edge
 secrets:
   - 69e3be6a-fe40-4dec-84ce-ba2e5e9a62a0
-  - 3e3806a3-8bb0-4791-b65f-4c5fb81f14d3
+  - 6bd78cb1-fa09-49d6-b099-b0158f82aa6b
 environment:
   REPO: ryzech.net
   GH_USER: ryzech
