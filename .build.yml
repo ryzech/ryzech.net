@@ -1,22 +1,11 @@
 image: alpine/edge
 secrets:
-  - 69e3be6a-fe40-4dec-84ce-ba2e5e9a62a0
-  - 6bd78cb1-fa09-49d6-b099-b0158f82aa6b
-environment:
-  REPO: ryzech.net
-  GH_USER: ryzech
+  - 904aea66-f7c0-4cda-b91d-aa3b3796ea53
+sources:
+  - git+ssh://git@git.sr.ht/~ryzechdev/ryzech.net
 tasks:
-  - write-ssh-config: |
-      cat <<_FILE_ >> ~/.ssh/config
-      Host github.com
-        IdentityFile ~/.ssh/id_rsa
-        IdentitiesOnly yes
-        BatchMode yes
-        StrictHostKeyChecking no
-      _FILE_
-  - push-to-github: |
-      cd ~/"${REPO}"
-      # remove remotes/origin/HEAD so we don't push it
-      git remote set-head origin -d
-      git remote add github "git@github.com:${GH_USER}/${REPO}.git"
-      git push --prune github '+refs/remotes/origin/*:refs/heads/*' '+refs/tags/*:refs/tags/*'
+  - mirror-to-github: |
+      cd ~/ryzech.net
+      ssh-keyscan -t ed25519 github.com >> ~/.ssh/known_hosts
+      git remote add github git@github.com:ryzech/ryzech.net.git
+      git push --mirror github
