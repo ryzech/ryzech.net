@@ -1,5 +1,5 @@
 <extend template="base.shtml">
-<title id="title">Home</title>
+<title id="title" :text="$page.title"></title>
 <head id="head"></head>
 <div id="content">
     <h1 :text="$page.title"></h1>

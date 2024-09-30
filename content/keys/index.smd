@@ -5,3 +5,19 @@
 .layout = "keys.shtml",
 .draft = false,
 --- 
+# Keys
+
+These are all the public keys I use frequently online, GPG being the keys I use to sign all my commits, and ssh being what I use to access my repositories. If you ever need to check if something is actually me this is the way.
+
+## GPG Keys
+
+[raw file]($link.siteAsset('keys/gpg_ryzech.asc'))
+[RyzechDev]($code.siteAsset('keys/gpg_ryzech.asc'))
+
+## SSH Keys
+
+[raw file]($link.siteAsset('keys/github_ssh.pub'))
+[ryzech (GitHub)]($code.siteAsset('keys/github_ssh.pub'))
+
+[raw file]($link.siteAsset('keys/sourcehut_ssh.pub'))
+[RyzechDev (SourceHut)]($code.siteAsset('keys/sourcehut_ssh.pub'))

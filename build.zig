@@ -11,6 +11,7 @@ pub fn build(b: *std.Build) !void {
         .static_assets = &.{
             "keys/gpg_ryzech.asc",
             "keys/github_ssh.pub",
+            "keys/sourcehut_ssh.pub",
             "CNAME",
             "favicon.ico",
         },
