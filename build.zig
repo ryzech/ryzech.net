@@ -9,8 +9,10 @@ pub fn build(b: *std.Build) !void {
         .layouts_dir_path = "layouts",
         .assets_dir_path = "assets",
         .static_assets = &.{
-            "gpg_ryzech.asc",
-            "github_ssh.pub",
+            "keys/gpg_ryzech.asc",
+            "keys/github_ssh.pub",
+            "CNAME",
+            "favicon.ico",
         },
         .debug = true,
     });

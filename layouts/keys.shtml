@@ -13,17 +13,17 @@
     <h2 style="margin-bottom:0;">
       GPG Keys
     </h2>
-    <a href="$site.asset('gpg_ryzech.asc').link()"><h3>RyzechDev &lt;ryzechdev@ryzech.net&gt;</h3></a>
+    <a href="$site.asset('keys/gpg_ryzech.asc').link()"><h3>RyzechDev &lt;ryzechdev@ryzech.net&gt;</h3></a>
     <br>
-    <code id="gpg-ryzech" :text="$site.asset('gpg_ryzech.asc').bytes()"></code>
+    <code id="gpg-ryzech" :text="$site.asset('keys/gpg_ryzech.asc').bytes()"></code>
   </div>
   <br>
   <div>
       <h2 style="margin-botton:0;">
         SSH Keys
       </h2>
-      <a href="$site.asset('github_ssh.pub').link()"><h3>ryzech (GitHub)</h3></a>
+      <a href="$site.asset('keys/github_ssh.pub').link()"><h3>ryzech (GitHub)</h3></a>
       <br>
-      <code id="ssh-github-ryzech" :text="$site.asset('github_ssh.pub').bytes()"></code>
+      <code id="ssh-github-ryzech" :text="$site.asset('keys/github_ssh.pub').bytes()"></code>
   </div>
 </div>
