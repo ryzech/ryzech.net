@@ -13,17 +13,18 @@ body {
   margin: 0;
 }
 
-ul,
-ol,
-li {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+#nav {
+  text-align: center;
+}
+
+ul {
+  padding: 0;
   list-style-type: none;
 }
 
-li a {
-  padding: 5px 10px;
+li {
   display: inline-block;
+  margin: 0 10px; /* Optional: Add some spacing between items */
 }
 
 #content {
@@ -130,6 +131,8 @@ pre {
   border-radius: 6px;
   padding-top: 0.5rem !important;
   padding-bottom: 0.5rem !important;
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
 }
 
 code {
@@ -235,6 +238,10 @@ h4:lang(ja) {
 
   ul {
     padding-left: 1em;
+  }
+
+  p {
+    text-align: justify;
   }
 }
 

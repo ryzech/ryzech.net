@@ -17,11 +17,13 @@
     <super>
   </head>
   <body>
-    <li>
-      <a href="/">Home</a>
-      <a href="/keys/">Keys</a>
-      <a href="/blog/">Blog</a>
-    </li>
+    <div id="nav">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/keys/">Keys</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+    </div>
     <div id="content">
       <super>
     </div>
