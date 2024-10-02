@@ -3,7 +3,10 @@
 <head id="head"></head>
 <div id="content">
     <div :loop="$page.subpages()">
+      <div class="post-box">
         <a href="$loop.it.link()" class="post-link" :text="$loop.it.title"></a>
         <span class="post-byline" style="margin-bottom: 1rem;" :text="$loop.it.date.format('January 02, 2006')"></span>
+        <p class="post-description" :text="$loop.it.description"></p>
+      </div>
     </div>
 </div>
