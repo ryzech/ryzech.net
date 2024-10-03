@@ -1,0 +1,25 @@
+---
+.title = "Welcome to my blog!",
+.description = "Short first post introducing myself and what this blog will be for.",
+.date = @date("2024-10-02T00:00:00"),
+.author = "RyzechDev",
+.layout = "post.shtml",
+.draft = false,
+--- 
+#
+---
+Hello there!
+
+If you're here either you found me on github, in a discord, or similar. 
+Either way, you may or may not know who I am. I'm a programmer, musician,
+camera guy, and just a tech nerd!
+
+You might see me around game development spaces, minecraft (occasionally, though not often), or around [Legundo's](https://youtube.com/@legundo) community.
+I'm a developer and systems administrator for him so I'm decently active in that space.
+
+This blog will mainly be for my thoughts on anything technical, when or if I feel like posting. 
+There's also an [RSS](https://ryzech.net/index.xml) feed if anyone wants to be notified of new posts here, although it won't be very frequent.
+
+Hope whoever's reading this has a nice day, and stay safe. <3
+
+
