@@ -1,7 +1,8 @@
-image: alpine/edge
+image: archlinux
 oauth: pages.sr.ht/PAGES:RW
 packages:
   - hut
+  - git
   - zig
 environment:
   site: ryzech.net
