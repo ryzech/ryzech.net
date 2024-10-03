@@ -1,4 +1,10 @@
 image: alpine/edge
+oauth: pages.sr.ht/PAGES:RW
+packages:
+  - hut
+  - zig
+environment:
+  site: ryzech.net
 secrets:
   - 904aea66-f7c0-4cda-b91d-aa3b3796ea53
 sources:
@@ -9,3 +15,9 @@ tasks:
       ssh-keyscan -t ed25519 github.com >> ~/.ssh/known_hosts
       git remote add github git@github.com:ryzech/ryzech.net.git
       git push --mirror github
+  - package: |
+      cd ~/$site
+      zig build website
+      tar -cvz zig-out > ../site.tar.gz
+  - upload: |
+      hut pages publish -d $site site.tar.gz
