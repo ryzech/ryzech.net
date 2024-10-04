@@ -17,7 +17,7 @@ tasks:
       git remote add github git@github.com:ryzech/ryzech.net.git
       git push --mirror github
   - package: |
-      cd ~/$site
+      cd ~/ryzech.net
       zig build website
       tar -C zig-out -czf ../site.tar.gz .
   - upload: |
