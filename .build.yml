@@ -5,7 +5,7 @@ packages:
   - git
   - zig
 environment:
-  site: ryzech.net
+  site: ryzechdev.srht.site
 secrets:
   - 904aea66-f7c0-4cda-b91d-aa3b3796ea53
 sources:
