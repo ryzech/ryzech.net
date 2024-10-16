@@ -4,7 +4,7 @@
     .dependencies = .{
         .zine = .{
             .url = "https://github.com/kristoff-it/zine/archive/refs/heads/main.zip",
-            .hash = "122016fb06fd5e85a6b2d3ecde186fd2b8ffadde48fca98e062b988c2e3cf3980ed2",
+            .hash = "1220ae95f3b2442dc8dc61dc9110e5df7c70aea331392c5a50b83a48958601d57381",
         },
     },
     .paths = .{
